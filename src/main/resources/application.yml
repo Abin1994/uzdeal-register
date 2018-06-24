@@ -1,0 +1,33 @@
+spring:
+  #redis
+  redis:
+    jedis:
+      pool:
+        max-idle: -1
+        max-active: -1
+    host: 101.132.139.49
+    port: 6379
+    database: 0
+    password: test123d3b1294a61a07da9b49b6e22b2cbd7f9
+  #druid
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/uzdeal_register?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.itcat.uzdealregister.entity
+  global-config:
+    id-type: 3
+    field-strategy: 2
+    db-column-underline: true
+    logic-delete-value: 1
+    logic-not-delete-value: 0
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    jdbc-type-for-null: 'null'
+
