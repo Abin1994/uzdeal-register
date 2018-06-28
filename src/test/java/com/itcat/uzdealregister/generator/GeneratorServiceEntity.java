@@ -23,12 +23,12 @@ public class GeneratorServiceEntity {
     public void generateCode() {
         String packageName = "com.itcat.uzdealregister";
         boolean serviceNameStartWithI = false;//user -> UserService, 设置成true: user -> IUserService
-        generateByTables(serviceNameStartWithI, packageName,"user");
+        generateByTables(serviceNameStartWithI, packageName,"miaosha_user");
     }
 
     private void generateByTables(boolean serviceNameStartWithI, String packageName, String... tableNames) {
         GlobalConfig config = new GlobalConfig();
-        String dbUrl = "jdbc:mysql://localhost:3306/uzdeal_register";
+        String dbUrl = "jdbc:mysql://101.132.139.49:3306/uzdeal_register";
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL)
                 .setUrl(dbUrl)

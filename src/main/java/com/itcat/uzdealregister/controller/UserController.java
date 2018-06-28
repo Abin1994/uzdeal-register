@@ -3,6 +3,7 @@ package com.itcat.uzdealregister.controller;
 
 import com.itcat.uzdealregister.entity.User;
 import com.itcat.uzdealregister.service.UserService;
+import com.itcat.uzdealregister.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -35,12 +36,13 @@ public class UserController {
      */
     @RequestMapping("/insert")
     public void insert(){
-        User user = new User();
+     /*   User user = new User();
         user.setId(1);
         user.setUserName("tony");
         user.setUserPassword("1234");
 
-        userService.insert(user);
+        userService.insert(user);*/
+        System.err.println(MD5Util.inputPassToDbPass("123456", "1a2b3c4d"));
     }
 
 

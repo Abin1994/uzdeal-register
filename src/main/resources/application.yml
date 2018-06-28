@@ -14,8 +14,18 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 1234
-    url: jdbc:mysql://localhost:3306/uzdeal_register?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://101.132.139.49:3306/uzdeal_register?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     type: com.alibaba.druid.pool.DruidDataSource
+#thymeleaf
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
 #mybatis
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
