@@ -2,6 +2,9 @@ package com.itcat.uzdealregister.service;
 
 import com.itcat.uzdealregister.entity.MiaoshaUser;
 import com.baomidou.mybatisplus.service.IService;
+import com.itcat.uzdealregister.vo.MiaoshaUserVo;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface MiaoshaUserService extends IService<MiaoshaUser> {
 
+    public String login(HttpServletResponse response, MiaoshaUserVo userVo);
 }

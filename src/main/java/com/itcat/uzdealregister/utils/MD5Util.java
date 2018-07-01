@@ -34,5 +34,10 @@ public class MD5Util {
         return dbPass;
     }
 
+
+    public static void main(String[] args){
+
+    }
+
 }
 
