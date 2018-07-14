@@ -26,6 +26,21 @@ spring:
     enabled: true
     encoding: UTF-8
     mode: HTML5
+#rabbitmq
+  rabbitmq:
+    host: 101.13.139.49
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 10
+        prefetch: 1
+        auto-startup: true
+        default-requeue-rejected: true
+    
 #mybatis
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
