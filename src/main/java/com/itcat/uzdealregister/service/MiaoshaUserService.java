@@ -2,9 +2,6 @@ package com.itcat.uzdealregister.service;
 
 import com.itcat.uzdealregister.entity.MiaoshaUser;
 import com.baomidou.mybatisplus.service.IService;
-import com.itcat.uzdealregister.vo.MiaoshaUserVo;
-
-import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -12,9 +9,8 @@ import javax.servlet.http.HttpServletResponse;
  * </p>
  *
  * @author lingbinli
- * @since 2018-06-26
+ * @since 2018-07-15
  */
 public interface MiaoshaUserService extends IService<MiaoshaUser> {
 
-    public String login(HttpServletResponse response, MiaoshaUserVo userVo);
 }

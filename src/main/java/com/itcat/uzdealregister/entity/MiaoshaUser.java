@@ -1,6 +1,8 @@
 package com.itcat.uzdealregister.entity;
 
+import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
+import com.baomidou.mybatisplus.annotations.TableId;
 import java.io.Serializable;
 
 import com.baomidou.mybatisplus.annotations.Version;
@@ -15,7 +17,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author lingbinli
- * @since 2018-06-26
+ * @since 2018-07-15
  */
 @Data
 @Accessors(chain = true)
@@ -26,23 +28,27 @@ public class MiaoshaUser implements Serializable {
     /**
      * 用户ID，手机号码
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    private String nickname;
+    /**
+     * 用户名
+     */
+    private String username;
+    /**
+     * 手机号
+     */
+    private String mobile;
     /**
      * MD5(MD5(pass明文+固定salt) + salt)
      */
     private String password;
     private String salt;
     /**
-     * 头像，云存储的ID
-     */
-    private String head;
-    /**
      * 注册时间
      */
     private Date registerDate;
     /**
-     * 上蔟登录时间
+     * 上次登录时间
      */
     private Date lastLoginDate;
     /**
