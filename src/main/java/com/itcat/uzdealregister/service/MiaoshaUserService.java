@@ -2,6 +2,8 @@ package com.itcat.uzdealregister.service;
 
 import com.itcat.uzdealregister.entity.MiaoshaUser;
 import com.baomidou.mybatisplus.service.IService;
+import com.itcat.uzdealregister.result.CodeMsg;
+import com.itcat.uzdealregister.vo.LoginVO;
 
 /**
  * <p>
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface MiaoshaUserService extends IService<MiaoshaUser> {
 
+    CodeMsg login(LoginVO loginVO);
 }

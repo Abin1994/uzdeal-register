@@ -1,5 +1,7 @@
 package com.itcat.uzdealregister;
 
+import com.itcat.uzdealregister.redis.MiaoshaUserKey;
+import com.itcat.uzdealregister.redis.RedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +24,14 @@ public class RedisTest {
     @Autowired
     RedisTemplate redisTemplate;
 
+    @Autowired
+    private RedisService redisService;
+
     @Test
     public void test1(){
         System.err.println("...start...");
-        //redisTemplate.opsForValue().get();
+        redisService.set(new MiaoshaUserKey("q"),"test001","ddd");
+
+        System.err.println(redisService.get(new MiaoshaUserKey("q"),"test001",String.class));
     }
 }

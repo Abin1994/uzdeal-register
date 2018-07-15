@@ -36,7 +36,9 @@ public class MD5Util {
 
 
     public static void main(String[] args){
-
+        System.err.println("...start...");
+        System.err.println(formPassToDBPass(inputPassToFormPass("123456"),"1A2B3C4D"));
+        System.err.println(inputPassToDbPass("123456","1A2B3C4D"));
     }
 
 }
